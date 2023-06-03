@@ -1,0 +1,14 @@
+ {
+     "builds": [
+         {
+             "src": "perdiction_api/api.py",
+             "use": "@vercel/python"
+         }
+     ],
+     "routes": [
+         {
+             "src": "/(.*)",
+             "dest": "perdiction_api/api.py"
+         }
+     ]
+ }
