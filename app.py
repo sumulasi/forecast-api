@@ -31,7 +31,7 @@ def adfuller_test(income):
 
 
 @app.route("/sales/<months>")
-@cross_origin()
+@cross_origin(origins='*')
 def forecast_sales(months):
     shiftMonth = 47
     predict_start = 87
@@ -68,7 +68,7 @@ def forecast_sales(months):
 
 
 @app.route("/income/<months>")
-@cross_origin()
+@cross_origin(origins='*')
 def forecast_income(months):
     shift_month = 9
     predict_start = 87
