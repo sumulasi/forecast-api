@@ -16,7 +16,6 @@ api = Api(app)
 
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
-app.run(host='0.0.0.0', port=5002)
 
 def adfuller_test(income):
     result = adfuller(income)
@@ -108,4 +107,4 @@ def forecast_income(months):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
