@@ -14,7 +14,8 @@ from pandas.tseries.offsets import DateOffset
 app = Flask(__name__)
 api = Api(app)
 
-cors = CORS(app)
+cors = CORS(app, resources={r"/sales": {"origins": "http://autoconcept-forecast.s3-website.eu-north-1.amazonaws.com/"},
+                            r"/income": {"origins": "http://autoconcept-forecast.s3-website.eu-north-1.amazonaws.com/"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 def adfuller_test(income):
